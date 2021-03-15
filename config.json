@@ -1,4 +1,4 @@
 {
-    "authToken": "1684594802:AAHqdhV1NXj0I-FZ2pNwooWBVjI5mmUfuhk",
-    "owner": 1633311757
+    "authToken": $TOKEN,
+    "owner": $OWNER
 }
