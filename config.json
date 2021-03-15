@@ -1,4 +1,4 @@
 {
-    "authToken": process.env.TOKEN,
-    "owner": process.env.OWNER
+    "authToken": $TOKEN,
+    "owner": $OWNER
 }
