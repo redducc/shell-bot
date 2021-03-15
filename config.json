@@ -1,4 +1,4 @@
 {
-    "authToken": ${TOKEN},
-    "owner": ${OWNER}
+    "authToken": "TOKEN",
+    "owner": OWNER
 }
