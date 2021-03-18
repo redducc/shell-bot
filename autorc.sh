@@ -46,7 +46,7 @@ clone(){
 echo "Enter file/folder id"
 read id
 printf "=================\n"
-eval "gclone copy $b$name{$id}$b $b$name{$td_id}$b --drive-server-side-across-configs -vP"
+eval "gclone copy $b$name{$id}$b $b$name{$td_id}$b --drive-server-side-across-configs -P"
 }
 copyurl(){
 echo "Enter URL"
