@@ -43,14 +43,14 @@ fi
 choice
 }
 clone(){
-echo "Enter file/folder id"
+printf "Enter file/folder id\n[If you want New destination foldername, enter ID <space> <foldername>]"
 read id
 printf "=================\n"
 if [[ "$id" = *" "* ]]
 then
 	IFS=' '
         read -r -a arr <<< "$id"
-	echo "gclone copy $b$name{$id}$b $b$name{$td_id}/${arr[1]}$b --drive-server-side-across-configs -P"
+	eval "gclone copy $b$name{$id}$b $b$name{$td_id}/${arr[1]}$b --drive-server-side-across-configs -P"
 else	
 	eval "gclone copy $b$name{$id}$b $b$name{$td_id}$b --drive-server-side-across-configs -P"
 fi
