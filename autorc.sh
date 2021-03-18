@@ -20,7 +20,7 @@ fi
 }
 call(){
 echo "================="
-printf "Got remote name = $name/n TeamDrive ID = $td_id"
+printf "Got remote name = $name\nTeamDrive ID = $td_id"
 echo "================="
 echo "Select your choice" 
 printf "1. copyurl\n2. links\n3. drive cloning\nEnter a number: "
