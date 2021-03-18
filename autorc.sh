@@ -52,7 +52,7 @@ then
         read -r -a arr <<< "$id"
 	str1=${arr[0]}
 	str2=$(for word in "${arr[@]}"; do eval "str2+=$i"; done)
-	echo "gclone copy $b$name{${arr[0]}}$b $b$name{$td_id}/${arr[1]}$b --drive-server-side-across-configs -P"
+	echo "gclone copy $b$name{${arr[0]}}$b $b$name{$td_id}/$str2$b --drive-server-side-across-configs -P"
 else	
 	eval "gclone copy $b$name{$id}$b $b$name{$td_id}$b --drive-server-side-across-configs -P"
 fi
