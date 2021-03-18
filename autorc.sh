@@ -48,11 +48,8 @@ read id
 printf "=================\n"
 if [[ "$id" = *" "* ]]
 then
-	IFS=' '
-        read -r -a arr <<< "$id"
-	str1=${arr[0]}
-	str2=$(for word in "${arr[@]}"; do eval "str2+=$word"; done)
-	printf "$str1\n$str2\ngclone copy $b$name{$str1}$b $b$name{$td_id}/$str2$b --drive-server-side-across-configs -P"
+	IFS=' ' read s1 s2 <<< $id
+        eval "gclone copy $b$name{$s1}$b $b$name{$td_id}/s2$b --drive-server-side-across-configs -P"
 else	
 	eval "gclone copy $b$name{$id}$b $b$name{$td_id}$b --drive-server-side-across-configs -P"
 fi
