@@ -46,7 +46,14 @@ clone(){
 echo "Enter file/folder id"
 read id
 printf "=================\n"
-eval "gclone copy $b$name{$id}$b $b$name{$td_id}$b --drive-server-side-across-configs -P"
+if [[ "$id" = *" "* ]]
+then
+	IFS=' '
+        read -r -a arr <<< "$id"
+	echo "gclone copy $b$name{$id}$b $b$name{$td_id}/${arr[1]}$b --drive-server-side-across-configs -P"
+else	
+	eval "gclone copy $b$name{$id}$b $b$name{$td_id}$b --drive-server-side-across-configs -P"
+fi
 }
 copyurl(){
 echo "Enter URL"
