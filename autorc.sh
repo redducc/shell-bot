@@ -20,7 +20,7 @@ fi
 }
 call(){
 echo "================="
-echo "Got remote name = $name"
+printf "Got remote name = $name/n TeamDrive ID = $td_id"
 echo "================="
 echo "Select your choice" 
 printf "1. copyurl\n2. links\n3. drive cloning\nEnter a number: "
@@ -46,7 +46,7 @@ clone(){
 echo "Enter file/folder id"
 read id
 printf "=================\n"
-eval "rclone copy $b$name{$id}$b $bname$b{}$b --drive-server-side-across-configs -vP"
+eval "rclone copy $b$name{$id}$b $bname$b{$td_id}$b --drive-server-side-across-configs -vP"
 }
 copyurl(){
 echo "Enter URL"
@@ -74,6 +74,7 @@ fi
 main(){
 b='"'
 getname
+td_id=$(grep -Po 'team_drive = \K[^ ]+' .config/rclone/rclone.conf)
 printf "=====WELCOME======\n================="
 call
 }
