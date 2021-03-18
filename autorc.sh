@@ -49,7 +49,7 @@ printf "=================\n"
 if [[ "$id" = *" "* ]]
 then
 	IFS=' ' read s1 s2 <<< $id
-        eval "gclone copy $b$name{$s1}$b $b$name{$td_id}/s2$b --drive-server-side-across-configs -P"
+        eval "gclone copy $b$name{$s1}$b $b$name{$td_id}/$s2$b --drive-server-side-across-configs -P"
 else	
 	eval "gclone copy $b$name{$id}$b $b$name{$td_id}$b --drive-server-side-across-configs -P"
 fi
