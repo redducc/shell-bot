@@ -1,6 +1,6 @@
 #!/bin/bash
 getname(){
-name=$(rclone listremotes)
+name=$(gclone listremotes)
 }
 choice(){
 echo "================="
@@ -46,13 +46,13 @@ clone(){
 echo "Enter file/folder id"
 read id
 printf "=================\n"
-eval "rclone copy $b$name{$id}$b $bname$b{$td_id}$b --drive-server-side-across-configs -vP"
+eval "gclone copy $b$name{$id}$b $bname$b{$td_id}$b --drive-server-side-across-configs -vP"
 }
 copyurl(){
 echo "Enter URL"
 read url
 printf "=================\n"
-eval "rclone copyurl "$b$url$b" "$name:/" -aP"
+eval "gclone copyurl "$b$url$b" "$name:/" -aP"
 }
 links(){
 printf "=================\n"
