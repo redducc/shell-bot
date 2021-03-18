@@ -74,7 +74,7 @@ fi
 main(){
 b='"'
 getname
-td_id=$(grep -Po 'team_drive = \K[^ ]+' .config/rclone/rclone.conf)
+td_id=$(grep -Po 'team_drive = \K[^ ]+' '.config/rclone/rclone.conf')
 printf "=====WELCOME======\n================="
 call
 }
