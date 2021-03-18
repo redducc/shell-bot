@@ -50,7 +50,9 @@ if [[ "$id" = *" "* ]]
 then
 	IFS=' '
         read -r -a arr <<< "$id"
-	eval "gclone copy $b$name{$id}$b $b$name{$td_id}/${arr[1]}$b --drive-server-side-across-configs -P"
+	str1=${arr[0]}
+	str2=$(for word in "${arr[@]}"; do eval "str2+=$i"; done)
+	echo "gclone copy $b$name{${arr[0]}}$b $b$name{$td_id}/${arr[1]}$b --drive-server-side-across-configs -P"
 else	
 	eval "gclone copy $b$name{$id}$b $b$name{$td_id}$b --drive-server-side-across-configs -P"
 fi
