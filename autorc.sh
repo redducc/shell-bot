@@ -23,7 +23,7 @@ echo "================="
 printf "Got remote name = $name\nTeamDrive = $td_id\n"
 echo "================="
 echo "Select your choice" 
-printf "1. copyurl\n2. links\n3. drive cloning\nEnter a number: "
+printf "1. copyurl\n2. links\n3. drive cloning\nq. ExitEnter a number: "
 read r
 if [[ "$r" == "1" ]]
 then
@@ -37,10 +37,14 @@ elif [[ "$r" == "3" ]]
 then
 	echo "================="
 	clone
+elif [[ "$r" == "q" ]]
+	echo "Exiting..."
+	exit
 else 
 	printf "=================\nWrong Choice ! Start Again\n================="
+	call
 fi
-choice
+call
 }
 clone(){
 printf "Enter file/folder id\n[If you want New destination foldername, enter ID <space> <foldername>]"
