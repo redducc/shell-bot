@@ -22,6 +22,7 @@ then
 	echo "================="
 	clone
 elif [[ "$r" == "q" ]]
+then
 	echo "Exiting..."
 	exit
 else 
