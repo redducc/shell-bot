@@ -7,7 +7,7 @@ echo "================="
 printf "Got remote name = $name\nTeamDrive = $td_id\n"
 echo "================="
 echo "Select your choice" 
-printf "1. copyurl\n2. links\n3. drive cloning\nq. ExitEnter a number: "
+printf "1 - copyurl\n2 - links\n3 - drive cloning\nq - Exit\n=================\nEnter your Choice: "
 read r
 if [[ "$r" == "1" ]]
 then
