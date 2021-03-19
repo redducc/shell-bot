@@ -2,22 +2,6 @@
 getname(){
 name=$(gclone listremotes)
 }
-choice(){
-echo "================="
-echo "Continue? (y/n)"
-read ch
-if [[ "$ch" == "y" ]]
-then
-	call
-elif [[ "$ch" == "n" ]]
-then
-	echo "Exiting"
-	exit
-else
-	printf "Wrong Choice!Enter again\n================="
-	choice
-fi
-}
 call(){
 echo "================="
 printf "Got remote name = $name\nTeamDrive = $td_id\n"
