@@ -58,7 +58,7 @@ copyurl(){
 echo "Enter URL"
 read url
 printf "=================\n"
-eval "gclone copyurl "$b$url$b" "$name:/" -aP"
+eval "gclone copyurl "$b$url$b" "$name/" -aP"
 }
 links(){
 printf "=================\n"
