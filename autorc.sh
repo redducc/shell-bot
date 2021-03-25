@@ -4,7 +4,12 @@ name=$(gclone listremotes)
 }
 call(){
 echo "================="
-printf "Got remote name = $name\nTeamDrive = $td_id\n"
+if [ -z "$td-id" ]
+then
+	printf "Got remote name = $name"
+else	
+	printf "Got remote name = $name\nTeamDrive = $td_id\n"
+fi
 echo "================="
 echo "Select your choice" 
 printf "1 - copyurl\n2 - links\n3 - drive cloning\nq - Exit\n=================\nEnter your Choice: "
