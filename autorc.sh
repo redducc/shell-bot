@@ -4,11 +4,12 @@ name=$(gclone listremotes)
 }
 call(){
 echo "================="
-if [ -z "$td-id" ]
+type = $(grep -Po 'type = \K[^ ]+' '.config/rclone/rclone.conf')
+if [ "$type" = "drive" ]
 then
-	printf "Got remote name = $name"
-else	
 	printf "Got remote name = $name\nTeamDrive = $td_id\n"
+else	
+	printf "Got remote name = $name\n"
 fi
 echo "================="
 echo "Select your choice" 
