@@ -72,7 +72,7 @@ commands to your computer!
 If you want to allow another user to use the bot, use `/token` and give
 that user the resulting link. If you want to use this bot on a group,
 `/token` will give you a message to forward into the group.
-
+/grant <user id>
 ## Proxy server
 
 shell-bot obeys the `https_proxy` or `all_proxy` environment variable
